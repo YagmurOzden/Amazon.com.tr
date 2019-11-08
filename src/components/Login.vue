@@ -1,84 +1,45 @@
-<template>
-    <div>
-        <div class="LoginPage">
-            <div class="Logo">
-                <a href="https://www.amazon.com.tr">
-                    <img src="../assets/pic_whiteAmazon.png" width=100px>
-                </a>
-            </div>
-            <div class="Box">
-                <h2>Giriş Yap</h2>
-                <p>E-posta adresi veya telefon numarası</p>
-                <input id="inp_login">
-                <p></p>
-                <button> 
-                    <p> Devam Et</p>
-                </button>
+<template> 
+<div> <div class="LoginPage"> <div class="Logo"> <a href="https://www.amazon.com.tr"> <img src="../assets/pic_whiteAmazon.png" width=100px> </a> </div> <div class="Box"> <h2>Giriş Yap</h2> <p>E-posta adresi veya telefon numarası</p> <input id="inp_login"> <p></p> <button> <p> Devam Et</p> </button> <div class="TextRow">Oturum açarak,
+Amazon’un <a href="#">Kullanım ve Satış Koşullarını</a> kabul etmektesiniz. Lütfen <a href="https://www.amazon.com.tr/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=20190901000000000000000000000000000000000000">Gizlilik Bildirimimiz</a>,
+<a href="https://www.amazon.com.tr/gp/help/customer/display.html/?nodeId=201890250">Çerezler Bildirimimiz</a> ve <a href="https://www.amazon.com.tr/gp/BIT/InternetBasedAds">İlgi Alanına Dayalı Reklamlar Bildirimimize</a> göz atın. </div> <a href="#" class="a-expander-header a-declarative a-expander-inline-header a-link-expander" > <i class="a-icon a-icon-expand"></i> <span class="a-expander-prompt"> Yardıma mı ihtiyacınız var? </span> </a> </div> <div class="line"> <h5>Amazon hesabınız yok mu?</h5> </div> 
 
-                 <div class="TextRow">Oturum açarak, Amazon’un 
-                <a href="#">Kullanım ve Satış Koşullarını</a> kabul etmektesiniz. Lütfen 
-  	                <a href="https://www.amazon.com.tr/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=20190901000000000000000000000000000000000000">Gizlilik Bildirimimiz</a>, 
-                        <a href="https://www.amazon.com.tr/gp/help/customer/display.html/?nodeId=201890250">Çerezler Bildirimimiz</a> ve <a href="https://www.amazon.com.tr/gp/BIT/InternetBasedAds">İlgi Alanına Dayalı Reklamlar Bildirimimize</a> göz atın.
-
-                </div>
-                <a href="#" 
-                class="a-expander-header a-declarative a-expander-inline-header a-link-expander" >
-                 
-                    <i class="a-icon a-icon-expand"></i>
-                    <span class="a-expander-prompt">
-                        Yardıma mı ihtiyacınız var?
-                    </span>
-                </a>
+	<button id="btn_Register"><router-link to ="/register" @click="header" style="float:left; color: black;"> <p>Amazon Hesabınızı Oluşturun</p> </router-link></button>
 
 
-
-          
-            </div>
-              <div class="line">
-                <h5>Amazon hesabınız yok mu?</h5>
-            </div>
-
-            <button id="btn_Register"> 
-                    <p>Amazon Hesabınızı Oluşturun</p>
-            </button>
-        </div>
-    </div>
+ </div> 
+ <router-view />
+ </div> 
 </template>
-
-
-
-
-<script>
-export default {
-    
+ <script> export default {
+    name: 'login'
 }
-</script>
 
-<style scoped>
-body{
+</script> <style scoped> body {
     background-color: white;
 }
-.LoginPage{
-          background-color: white;
 
- }
- a{
-     background-color: white;
- }
- .Logo{
-     background-color: white;
-     height:103; 
-     width: 40;
-     
- }
- .Box{
-     background-color: white;
+.LoginPage {
+    background-color: white;
+}
+
+a {
+    background-color: white;
+}
+
+.Logo {
+    background-color: white;
+    height: 103;
+    width: 40;
+}
+
+.Box {
+    background-color: white;
     border: 1px solid;
     border-radius: 4px;
     position: relative;
     padding: 20px 26px!important;
     box-sizing: border-box;
-    font-family: "Amazon Ember",Arial,sans-serif;
+    font-family: "Amazon Ember", Arial, sans-serif;
     font-size: 13px;
     line-height: 19px;
     color: #111;
@@ -86,26 +47,29 @@ body{
     height: 354px;
     text-align: center;
     display: block;
-      margin-left:auto;
-      margin-right:auto;
- }
- .Box button{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Box button {
     background: #f0c14b;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+}
 
- }
- .Box .TextRow{
-     background-color: white;
- }
- .LoginPage  .Box button{
-     width:350px;
- }
-.LoginPage  .Box button p{
-background-color: transparent;
+.Box .TextRow {
+    background-color: white;
+}
+
+.LoginPage .Box button {
+    width: 350px;
+}
+
+.LoginPage .Box button p {
+    background-color: transparent;
     border: 0;
     display: block;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 13px;
     line-height: 29px;
     margin: 0;
@@ -114,8 +78,9 @@ background-color: transparent;
     text-align: center;
     white-space: nowrap;
 }
-.LoginPage .Box #inp_login{
-    width:296;
+
+.LoginPage .Box #inp_login {
+    width: 296;
     height: 40;
     width: 100%;
     margin-right: 0;
@@ -123,15 +88,15 @@ background-color: transparent;
     height: 31px;
     padding: 3px 7px;
     line-height: normal;
-        border: 1px solid #a6a6a6;
+    border: 1px solid #a6a6a6;
     border-top-color: #949494;
     border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 1px 0 rgba(0, 0, 0, .07) inset;
     outline: 0;
     margin: 0;
     font-size: 100%;
     vertical-align: middle;
-     text-rendering: auto;
+    text-rendering: auto;
     color: initial;
     letter-spacing: normal;
     word-spacing: normal;
@@ -141,7 +106,7 @@ background-color: transparent;
     display: inline-block;
     text-align: start;
     -webkit-appearance: textfield;
-     -webkit-rtl-ordering: logical;
+    -webkit-rtl-ordering: logical;
     cursor: text;
     margin: 0em;
     font: 400 13.3333px Arial;
@@ -151,16 +116,18 @@ background-color: transparent;
     border-color: initial;
     border-image: initial;
 }
- .LoginPage   .line {
-       text-align: center;
-           text-align: center;
+
+.LoginPage .line {
+    text-align: center;
+    text-align: center;
     position: relative;
     top: 2px;
     padding-top: 1px;
     margin-bottom: 14px;
     line-height: 0;
 }
- .LoginPage  h5 {
+
+.LoginPage h5 {
     display: block;
     font-size: 0.83em;
     margin-block-start: 1.67em;
@@ -168,13 +135,11 @@ background-color: transparent;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    color:#767676
-
-
+    color: #767676
 }
-.LoginPage #btn_Register{
-    width:500px;
- }
+
+.LoginPage #btn_Register {
+    width: 500px;
+}
 
 </style>
-

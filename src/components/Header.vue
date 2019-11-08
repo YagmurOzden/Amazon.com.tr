@@ -1,6 +1,6 @@
 <template>
     <div class="main-container" id="head">
-        <header class="nav-opt-sprite nav-locale-tr nav-lang-tr nav-ssl nav-unrec">
+        <header v-show="header_visibility" class="nav-opt-sprite nav-locale-tr nav-lang-tr nav-ssl nav-unrec">
 
 			<div class="navbar row" id="nav-top">
 				<div class="nav-item col-2" id="nav-top-left">
@@ -74,9 +74,18 @@
 			<div class="navbar" id="nav-bottom">
 				<div class="nav-item" id="nav-to-left">
 					<ul>
-						<li><a href="#">Günün Fırsatları</a></li>
-						<li><a href="#">Çok Satanlar</a></li>
-						<li><a href="#">Yeni Çıkanlar</a></li>
+						<li><a href="#"><router-link to ="/gun" @click="header" style="float:left font-size: 13px;">Günün Fırsatları
+	</router-link></a></li>
+						<li>
+							<router-link to="/cok-satanlar">
+								<a href="#">Çok Satanlar</a>
+							</router-link>
+						</li>
+						<li>
+							<router-link to="/yeni-cikan">
+								<a>Yeni Çıkanlar</a>
+							</router-link>
+						</li>
 						<li><a href="#">Müşteri Hizmetleri</a></li>
 						<li><a href="#">Satış Yap</a></li>
 
@@ -86,16 +95,61 @@
 					<ul>
 						<li>
 							<div id="login-area">
+												<div class="navbar">
+													<div class="dropdown">
 								<a href="#"
 									class="nav-a nav-a-2" data-ux-jq-mouseenter="true" id="nav-link-accountList"
 									tabindex="25">
-									<span class="row nav-line-1">Merhaba, Giriş yap</span>
-									<span class="row nav-line-2 text-bold">Hesap ve Listeler
+									<span class="row nav-line-1"> </span>
+									<span class="row nav-line-2 text-bold">
 										<span class="nav-icon nav-arrow" style="visibility: visible;">
+													<div>
+														<div class="mainn">
+														<b-dropdown id="dropdown-buttons" text="Merhaba, Giriş yap
+														Hesap ve Listeler"  class="m-2 ">
+															<b-dropdown-item-button style="width: 485px;" ></b-dropdown-item-button>
+																<b-container>
+																	<b-row style="border: 0.5px solid gray; height: 70px;">
+																		<b-col>
+																			<b-row>
+																				<button id="btn_Login" @click="header_visibility = false" style="margin-left: 30%; margin-top: 8px; width:197px; height:30px; border-color: #c89411 #b0820f #99710d; background-color:#c89411;"><router-link to ="/register" @click="header" >Giriş Yap</router-link></button>
+																			</b-row>
+																			<b-row class="text-center"  style="height: 15px; margin-left: 55px;">
+																				<p style="font-size:11px;">Yeni müşteri misiniz? <a style="font-size:11px; color: #0066c0;" href="#"> Buradan başlayın.</a> </p>
+																			</b-row>
+																		</b-col>
+																	</b-row>
+																	<b-row style="border: 0.5px solid gray; height: 115px;">
+																		<b-col style="border: 0.5px solid gray;" class="col-md-6">
+																			<ul style="display: inline;">
+																				<li style="float:left; font-size: 16px; text-color: black; color: black;"><button style="border:none; background-color:white;"><router-link style="color: black;" to ="/listeler" @click="header_visibility = false" >Listelerim</router-link></button></li>
+																				<li><button style="border:none; background-color:white;"><router-link to ="/listeler" @click="header" style="float:left font-size: 13px; color: black;">Liste Oluşturun</router-link></button></li>
+																			</ul>
+																			
+																			
+																		</b-col>
+																		<b-col style="border: 0.5px solid gray;" class="col-md-6">
+																			<li><router-link to ="/login" @click="header" style="float:left; color: black;">Hesabım</router-link></li>
+																			<ul style="display: inline-block; float: left;">
+																				
+																				<li style="float:left;"><button style="border:none; background-color:white;"><router-link to ="/hesabim" style=" font-size: 16px; color: black;">Hesabım</router-link></button></li>
+																				<li style="float:left;"><button style="border:none; background-color:white;" @click="header_visibility = false"><router-link to ="/login" style=" font-size: 13px; color: black;" >Siparişlerim</router-link></button></li>
+																				<li style="float:left;"><button style="border:none; background-color:white;" @click="header_visibility = false"><router-link to ="/login" style=" font-size: 13px; color: black;">Benim İçin Önerilenler</router-link></button></li>
+																			</ul>
+																		</b-col>
+																	</b-row>
+																</b-container>
+														</b-dropdown>
+														</div>
+														
+													</div>	
+
 										</span>
 									
 									</span>
 								</a>
+													</div> 
+												</div>
 							</div>
 						</li>
 						<li>
@@ -125,7 +179,10 @@
 			</div>
 
 		</header>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<router-view />
     </div>
+
 </template>
 
 <script src="https://unpkg.com/@jeremyhamm/vue-slider"></script>
@@ -134,11 +191,26 @@
 import Slider from '@jeremyhamm/vue-slider'
 
 export default {
-    components: {Slider}
+	components: {Slider},
+	data(){
+		return{
+			header_visibility: true,
+			
+		}
+	},
+	methods:{
+		header(){
+			this.header_visibility = false;
+		}
+	}
 }
 </script>
 
+
 <style type="text/css">
+
+
+
 			#navbar #nav-shop .nav-a:hover {
 				color: #ff9900;
 				text-decoration: underline;
@@ -291,5 +363,35 @@ background-color: aqua;
 display: block;
 
 }
+
+
+/*------BUTTONS --------*/
+#btn_Login{
+    background-color: #FFC635;
+    color:black;
+    cursor: pointer;
+    background-position: right -170px;
+    height: 28px;
+    position: relative;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffe093;
+        border: 0;
+    line-height: 15px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10%
+
+
+}
+#below{
+border-top-style: solid;
+   border-bottom-style: solid;
+}
+
 
 </style>
