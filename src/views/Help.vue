@@ -1,9 +1,10 @@
 <template>
-    <div class="login">
-        
-        <Header/>
-        <Performans/>
-        <BackToTop/>
+    <div class="Help">
+
+        <Header />
+        <Help />
+        <BackToTop />
+
         <Footer />
     </div>
 </template>
@@ -11,16 +12,15 @@
 <script>
 
 import Header from '@/components/Header.vue'
-import Performans from '@/components/Performans.vue'
+import Help from '@/components/Help.vue'
 import BackToTop from '@/components/BackToTop.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-    name:'login',
+    name:'help',
     components:{
-        
         Header,
-        Performans,
+        Help,
         BackToTop,
         Footer
     }

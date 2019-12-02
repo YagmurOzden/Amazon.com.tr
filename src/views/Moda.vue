@@ -1,8 +1,8 @@
 <template>
-    <div class="login">
+    <div class="moda">
         
         <Header/>
-        <Performans/>
+        <Moda/>
         <BackToTop/>
         <Footer />
     </div>
@@ -11,16 +11,15 @@
 <script>
 
 import Header from '@/components/Header.vue'
-import Performans from '@/components/Performans.vue'
+import Moda from '@/components/Moda.vue'
 import BackToTop from '@/components/BackToTop.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
     name:'login',
     components:{
-        
         Header,
-        Performans,
+        Moda,
         BackToTop,
         Footer
     }

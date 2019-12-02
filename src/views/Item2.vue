@@ -2,7 +2,7 @@
     <div class="login">
         
         <Header/>
-        <Performans/>
+        <Item2/>
         <BackToTop/>
         <Footer />
     </div>
@@ -10,8 +10,9 @@
 
 <script>
 
+
 import Header from '@/components/Header.vue'
-import Performans from '@/components/Performans.vue'
+import Item2 from '@/components/Item2.vue'
 import BackToTop from '@/components/BackToTop.vue'
 import Footer from '@/components/Footer.vue'
 
@@ -19,8 +20,8 @@ export default {
     name:'login',
     components:{
         
-        Header,
-        Performans,
+     Header,
+        Item2,
         BackToTop,
         Footer
     }
