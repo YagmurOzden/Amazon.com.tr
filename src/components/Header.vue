@@ -2,6 +2,9 @@
 
     <div class="main-container" id="head" style="color:white">
 
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
         <header v-show="header_visibility" class="nav-opt-sprite nav-locale-tr nav-lang-tr nav-ssl nav-unrec">
 
             <div class="navbar row" id="nav-top">
@@ -164,7 +167,7 @@
                                 <a href="" class="hmenu-item">
                                     <b-row style="color:black">
                                         <b-col>
-                                            <p class="left"> Tüm Kategoriler </p>
+                                            <p class="left" style="color:red"> Tüm Kategoriler </p>
                                         </b-col>
                                         <b-col><i class="right"></i></b-col>
                                     </b-row>
@@ -516,7 +519,14 @@
 
                     </div>
 
-                    <span class="fa fa-bars" role="img" style="font-size:30px;cursor:pointer; margin-left:-150px; border:1px solid white; border-radius: 3px; font-size: 25px;     width: 38px; height: 36px;" v-on:click="openNav()">
+                    <span class="fa fa-bars" role="img" style=" font-size:30px;
+                                                                cursor:pointer; 
+                                                                margin-left:-150px; 
+                                                                border:1px solid white; 
+                                                                border-radius: 3px; 
+                                                                font-size: 25px;     
+                                                                width: 38px; 
+                                                                height: 36px;" v-on:click="openNav()">
 
 					</span>
 
@@ -524,15 +534,17 @@
 
                 <div class="nav-item col-2">
                     <a href="https://www.amazon.com.tr">
-                        <img src="../assets/pic_amazon.png" width=100px style="margin-right: 200px;">
+                        <img src="../assets/pic_amazon.png" width=100px style="margin-left: -405px;">
                     </a>
                 </div>
 
                 <div class="nav-item col-4" id="nav-top-center">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" style="width:600px; margin-left:-200px;">
                         <div class="input-group-prepend">
-                            <select aria-describedby="searchDropdownDescription" class="nav-search-dropdown searchSelect" data-nav-digest="0wsxXrBG0/pT/iqluXUXN0Rn2Zw=" data-nav-selected="0" id="searchDropdownBox" name="url" style="display: block; top: 0px;" tabindex="5" title="Şurada ara:">
-                                <option selected="selected" value="search-alias=aps">Tüm Kategoriler</option>
+                            <!-- tüm kategoriler bölümü -->
+                            <select aria-describedby="searchDropdownDescription" class="nav-search-dropdown searchSelect" data-nav-digest="0wsxXrBG0/pT/iqluXUXN0Rn2Zw=" data-nav-selected="0" id="searchDropdownBox" name="url" 
+                            style="display: block; top: 0px;  " tabindex="5" title="Şurada ara:">
+                                <option selected="selected" value="search-alias=aps" >Tüm Kategoriler</option>
                                 <option value="search-alias=baby">Bebek</option>
                                 <option value="search-alias=computers">Bilgisayarlar</option>
                                 <option value="search-alias=electronics">Elektronik</option>
@@ -548,6 +560,7 @@
                             </select>
                         </div>
                         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+
                         <div class="input-group-append">
                             <span class="input-group-text">
 								<i class="fas fa-search"
@@ -560,6 +573,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="navbar" id="nav-bottom">
                 <div class="nav-item" id="nav-to-left">
                     <ul>
@@ -594,55 +608,83 @@
                         <li>
                             <div id="login-area">
                                 <div class="navbar">
-                                    <div class="dropdown">
+                                    <div class="dropdown" >
                                         <a href="#" class="nav-a nav-a-2" data-ux-jq-mouseenter="true" style="color:black" id="nav-link-accountList" tabindex="25">
-                                            <span class="row nav-line-1"> </span>
-                                            <span class="row nav-line-2 text-bold">
-										<span class="nav-icon nav-arrow" style="visibility: visible;">
-													<div>
-														<div class="mainn">
-														<b-dropdown id="dropdown-buttons" text="Merhaba, Giriş yap
-														Hesap ve Listeler"  class="m-2 ">
-															<b-dropdown-item-button style="width: 485px;" ></b-dropdown-item-button>
-																<b-container>
-																	<b-row style="border: 0.5px solid gray; height: 70px;">
-																		<b-col>
-																			<b-row>
-																				<button id="btn_Login" @click="header_visibility = false" style="margin-left: 30%; margin-top: 8px; width:197px; height:30px; border-color: #c89411 #b0820f #99710d; background-color:#c89411;"><router-link to ="/register" @click="header" >Giriş Yap</router-link></button>
-																			</b-row>
-																			<b-row class="text-center"  style="height: 15px; margin-left: 55px;">
-																				<p style="font-size:11px;">Yeni müşteri misiniz? <a style="font-size:11px; color: #0066c0;" href="#"> Buradan başlayın.</a> </p>
-																			</b-row>
-																		</b-col>
-																	</b-row>
-																	<b-row style="border: 0.5px solid gray; height: 115px;">
-																		<b-col style="border: 0.5px solid gray;" class="col-md-6">
-																			<ul style="display: inline;">
-																				<li style="float:left; font-size: 16px; text-color: black; color: black;"><button style="border:none; background-color:white;"><router-link style="color: black;" to ="/listeler" @click="header_visibility = false" >Listelerim</router-link></button></li>
-																				<li><button style="border:none; background-color:white;"><router-link to ="/listeler" @click="header" style="float:left font-size: 13px; color: black;">Liste Oluşturun</router-link></button></li>
-																			</ul>
+                                                <span class="row nav-line-1"> </span>
+                                                <span class="row nav-line-2 text-bold">
+                                                    <span class="nav-icon nav-arrow" style=" visibility: visible;">
+                                                                <div >
+                                                                    <div class="mainn">
+                                                                        
+                                                                        <b-dropdown id="dropdown-buttons" text="Merhaba, Giriş yap
+                                                                        Hesap ve Listeler" class="m-2 ">
 
-																		</b-col>
-																		<b-col style="border: 0.5px solid gray;" class="col-md-6">
-																			<li><router-link to ="/login" @click="header" style="float:left; color: black;">Hesabım</router-link></li>
-																			<ul style="display: inline-block; float: left;">
+                                                                            <b-dropdown-item-button style="width: 485px; " ></b-dropdown-item-button>
+                                                                                <b-container> 
+                                                                                    <b-row style="border: 0.5px solid gray; height: 70px;">
+                                                                                        <b-col>
+                                                                                            <b-row>
+                                                                                                <button id="btn_Login" @click="header_visibility = false" 
+                                                                                                            style="margin-left: 30%; margin-top: 8px; width:197px; height:30px; border-color: #c89411 #b0820f #99710d; background-color:#c89411;">
+                                                                                                            <router-link to ="/register" @click="header" >Giriş Yap</router-link>
+                                                                                                </button>
+                                                                                            </b-row>
+                                                                                            <b-row class="text-center"  style="height: 15px; margin-left: 55px;">
+                                                                                                <p style="font-size:11px;">Yeni müşteri misiniz? 
+                                                                                                    <a style="font-size:11px; color: #0066c0;" href="#"> Buradan başlayın.</a> </p>
+                                                                                            </b-row>
+                                                                                        </b-col>
+                                                                                    </b-row>
+                                                                                    <b-row style="border: 0.5px solid gray; height: 115px;">
+                                                                                        <b-col style="border: 0.5px solid gray;" class="col-md-6">
+                                                                                            <ul style="display: inline; float:left; color:black;">
+                                                                                                <li style="float:left; font-size: 16px; color: black; color: black;">
+                                                                                                    <button style="border:none; background-color:white; color: black;">
+                                                                                                        <router-link  to ="/listeler"   @click="header_visibility = false" style="float:left; color: black;" >Listelerim</router-link>
+                                                                                                    </button>
+                                                                                                </li>
+                                                                                                <li style="float:left;">
+                                                                                                    <button style="border:none; background-color:white;">
+                                                                                                        <router-link to ="/listeler" @click="header" style="float:left font-size: 13px; color: black;">Liste Oluşturun</router-link>
+                                                                                                    </button>
+                                                                                                </li>
+                                                                                            </ul>
 
-																				<li style="float:left;"><button style="border:none; background-color:white;"><router-link to ="/hesabim" style=" font-size: 16px; color: black;">Hesabım</router-link></button></li>
-																				<li style="float:left;"><button style="border:none; background-color:white;" @click="header_visibility = false"><router-link to ="/login" style=" font-size: 13px; color: black;" >Siparişlerim</router-link></button></li>
-																				<li style="float:left;"><button style="border:none; background-color:white;" @click="header_visibility = false"><router-link to ="/login" style=" font-size: 13px; color: black;">Benim İçin Önerilenler</router-link></button></li>
-																			</ul>
-																		</b-col>
-																	</b-row>
-																</b-container>
-														</b-dropdown>
-														</div>
+                                                                                        </b-col>
+                                                                                        <b-col style="border: 0.5px solid gray;" class="col-md-6">
+                                                                                            <li style="float:center;"> 
+                                                                                                <router-link to ="/login" @click="header" style="float:left; color: black;">Hesabım</router-link>
+                                                                                            </li>
+                                                                                            <ul style="display: inline-block; float: left;">
 
-													</div>	
+                                                                                                <li style="float:left;">
+                                                                                                    <button style="border:none; background-color:white;">
+                                                                                                        <router-link to ="/hesabim" style=" font-size: 16px; color: black;">Hesabım</router-link>
+                                                                                                    </button>
+                                                                                                </li>
+                                                                                                <li style="float:left;">
+                                                                                                    <button style="border:none; background-color:white;" @click="header_visibility = false">
+                                                                                                        <router-link to ="/login" style=" font-size: 13px; color: black;" >Siparişlerim</router-link>
+                                                                                                    </button>
+                                                                                                </li>
+                                                                                                <li style="float:left;">
+                                                                                                    <button style="border:none; background-color:white;" @click="header_visibility = false">
+                                                                                                        <router-link to ="/login" style=" font-size: 13px; color: black;">Benim İçin Önerilenler</router-link>
+                                                                                                    </button>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </b-col>
+                                                                                    </b-row>
+                                                                                </b-container>
+                                                                        </b-dropdown>
+                                                                    </div>
 
-										</span>
+                                                                </div>	
 
-                                            </span>
-                                        </a>
+                                                        </span>
+
+                                                    </span>
+                                            </a>
                                     </div>
                                 </div>
                             </div>
@@ -991,4 +1033,5 @@ sidenav stilini değiştirin
     .hmenu-visible {
         visibility: visible;
     }
+    
 </style>
