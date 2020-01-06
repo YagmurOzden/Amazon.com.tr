@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 1500px; height: 600px;">
+    <div style="width: auto; height: 600px;">
         <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
 
             <b-carousel-slide img-src="https://images-eu.ssl-images-amazon.com/images/G/41/TR-hq/2019/img/Country_Expansion/XCM_Manual_1190410_1190410_915468_TR_TrustPage_DesktopHero_1500x600_1569398355_jpg._CB452867548_.jpg">
