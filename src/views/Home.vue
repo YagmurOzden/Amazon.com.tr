@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header />
+    <Header/>
     <Slider />
     <Body1 class="Body1" />
     <Body2 class="Body2" />
@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 import Header from '@/components/Header.vue'
 import Slider from '@/components/Slider.vue'
 import Body1 from '@/components/Body1.vue'
@@ -41,8 +40,8 @@ import Footer from '@/components/Footer.vue'
 export default {
   name: 'home',
   components: {
-    
-     Header,
+
+    Header,
     Slider,
     Body1,
     Body2,

@@ -5,65 +5,67 @@
         <footer class="py-5" style="background:#232F3E; text-align:center;">
             <div class="container text-white">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class=" Title col-md-3">
                         <ul class="list-unstyled">
-                            <li class="text-muted mb-3" style="color:white;"><b>Hakkımızda</b></li>
-                            <li><a href="#" style="color:white;"><small>Kariyer</small></a></li>
-                            <li><a href="#" style="color:white;"><small>İletişim</small></a></li>
+                            <li class="Title mb-3" ><b>Hakkımızda</b></li>
+                            <li class="secondTitle"><a href="#" ><small>Kariyer</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>İletişim</small></a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <ul class="list-unstyled">
-                            <li class="text-muted mb-3" style="color:white"><b>Bizimle Para Kazanın</b></li>
-                            <li><a href="#" style="color:white;"><small>Amazon'da Satış Yapın</small></a></li>
+                            <li class="Title mb-3" ><b>Bizimle Para Kazanın</b></li>
+                            <li class="secondTitle"><a href="#" style="color:white;"><small>Amazon'da Satış Yapın</small></a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <ul class="list-unstyled">
-                            <li class="text-muted mb-3" style="color:white"><b>Amazon Ödeme Araçları</b></li>
-                            <li><a href="#" style="color:white;"><small>Kredi Kartı</small></a></li>
-                            <li><a href="#" style="color:white;"><small>Taksitli Ödeme</small></a></li>
+                            <li class="Title mb-3" ><b>Amazon Ödeme Araçları</b></li>
+                            <li class="secondTitle"><a href="#" ><small>Kredi Kartı</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>Taksitli Ödeme</small></a></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <ul class="list-unstyled">
-                            <li class="text-muted mb-3" style="color:white;"><b>Size Yardımcı Olalım</b></li>
-                            <li><a href="#" style="color:white"><small>Kargoları Takip Edin veya
+                            <li class="Title mb-3" ><b>Size Yardımcı Olalım</b></li>
+                            <li class="secondTitle"><a href="#" style="color:white"><small>Kargoları Takip Edin veya
                                     Siparişleri Görüntüleyin</small></a></li>
-                            <li><a href="#" style="color:white;"><small>Teslimat Ücretleri ve Politikaları</small></a></li>
-                            <li><a href="#" style="color:white;"><small>İadeler</small></a></li>
-                            <li><a href="#" style="color:white;"><small>Amazon Mobil Uygulaması</small></a></li>
-                            <li><a href="#" style="color:white;"><small>Yardım</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>Teslimat Ücretleri ve Politikaları</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>İadeler</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>Amazon Mobil Uygulaması</small></a></li>
+                            <li class="secondTitle"><a href="#" ><small>Yardım</small></a></li>
                         </ul>
                     </div>
 
                 </div>
-                <div class="row">
-                    <a href="https://www.amazon.com.tr">
-						<img src="../assets/pic_amazon.png" width=100px style="margin-right: 200px;">
+                <div  id="logo" >
+                    <a >
+						<img src="../assets/pic_amazon.png" width=100px;>
 					</a>
                 </div>
                 <div class="row">
-                    <ul class="list-unstyled row" id="countries" >
-                        <li><a href="#" style="color:white;"><small>Avustralya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Brezilya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Kanada</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Çin</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Fransa</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Almanya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Hindistan</small></a></li>
-                        <li><a href="#" style="color:white;"><small>İtalya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Japonya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Meksika</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Hollanda</small></a></li>
-                        <li><a href="#" style="color:white;"><small>İspanya</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Birleşik Arap Emirlikleri</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Birleşik Krallık</small></a></li>
-                        <li><a href="#" style="color:white;"><small>ABD</small></a></li>
-                        <li><a href="#" style="color:white;"><small>Singapur</small></a></li>
+                    <ul class="list-unstyled row" id="Countries" >
+
+                    
+                        <li class="secondTitle"><a href="#"><small>Avustralya</small></a></li>
+                        <li class="secondTitle"><a href="#" ><small>Brezilya</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Kanada</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Çin</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Fransa</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Almanya</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Hindistan</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>İtalya</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Japonya</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Meksika</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Hollanda</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>İspanya</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Birleşik Arap Emirlikleri</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Birleşik Krallık</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>ABD</small></a></li>
+                        <li class="secondTitle" ><a href="#" ><small>Singapur</small></a></li>
                     </ul>          
                 </div>
-                <div class="row">
+                <div class="row"  id="bottomPages">
                     <div class="col-md-3">
                         <ul class="list-unstyled">
                             <li><a href="#" class="mb-3" style="color:white;"><small>Amazon Web Services</small></a></li>
@@ -120,12 +122,32 @@ export default {
     
 }
 </script>
+
+
 <style scoped>
     
+    .Title{
+        color:white
+    }
+    .secondTitle a {
+        color:#DDD
 
-
-    #countries li{
-        margin-right:10px;
+    }
+    #logo{
+        text-align:center;
+    }
+    #Countries li{
+        
+        margin-right:18px;
+    }
+    #bottomPages{
+    font-size: 11px!important;
+    padding: 0 .75em;
+    vertical-align: top;
+    text-align: left;
+    line-height: 115%;
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
     }
 
     #gotu li{

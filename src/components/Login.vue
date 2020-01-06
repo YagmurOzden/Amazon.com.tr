@@ -11,15 +11,44 @@
         <div class="Box"> 
             <h2>Giriş Yap</h2> 
             <p>E-posta adresi veya telefon numarası</p> 
-        <input id="inp_login"> <p></p> <button> 
-            <p> Devam Et</p> </button> 
+             <input
+              id="inp_login"
+                v-model="input.username"
+              type:="text"
+              
+              name="email"
+              required
+              autofocus="autofocus"
+              class="inputs"
+              placeholder="Eposta Adresinizi Giriniz"
+
+
+             
+             > <p></p> 
+             <p>Şifre Girin:</p> 
+             <input 
+             id="inp_login"
+               v-model="input.password"
+             
+              name="password"
+              required
+              class="inputs"
+              placeholder="Parola  Giriniz"
+              > <p></p> 
+
+
+            
+
+        <button v-on:click="login()"><p> Devam Et</p> </button> 
         <div class="TextRow">Oturum açarak,
-Amazon’un <a href="#">Kullanım ve Satış Koşullarını</a> kabul etmektesiniz. Lütfen 
-<a href="https://www.amazon.com.tr/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=20190901000000000000000000000000000000000000">Gizlilik Bildirimimiz</a>,
-<a href="https://www.amazon.com.tr/gp/help/customer/display.html/?nodeId=201890250">Çerezler Bildirimimiz</a> ve 
-<a href="https://www.amazon.com.tr/gp/BIT/InternetBasedAds">İlgi Alanına Dayalı Reklamlar Bildirimimize</a> göz atın. 
-</div> <a href="#" class="a-expander-header a-declarative a-expander-inline-header a-link-expander" >
-     <i class="a-icon a-icon-expand"></i> <span class="a-expander-prompt"> Yardıma mı ihtiyacınız var? </span> </a> </div> 
+        Amazon’un <a href="#">Kullanım ve Satış Koşullarını</a> kabul etmektesiniz. Lütfen 
+        <a href="https://www.amazon.com.tr/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=20190901000000000000000000000000000000000000">Gizlilik Bildirimimiz</a>,
+        <a href="https://www.amazon.com.tr/gp/help/customer/display.html/?nodeId=201890250">Çerezler Bildirimimiz</a> ve 
+        <a href="https://www.amazon.com.tr/gp/BIT/InternetBasedAds">İlgi Alanına Dayalı Reklamlar Bildirimimize</a> göz atın. 
+        </div> <a href="#" class="a-expander-header a-declarative a-expander-inline-header a-link-expander" >
+                    <i class="a-icon a-icon-expand"></i> 
+                    <span class="a-expander-prompt"> Yardıma mı ihtiyacınız var? </span> 
+                </a> </div> 
      <div class="line"> <h5>Amazon hesabınız yok mu?</h5> </div> 
 
 	<button id="btn_Register">
@@ -32,11 +61,70 @@ Amazon’un <a href="#">Kullanım ve Satış Koşullarını</a> kabul etmektesin
  <router-view />
  </div> 
 </template>
- <script> export default {
-    name: 'login'
-}
+ <script> 
+ /* eslint-disable */
+ const API_URL = "http://localhost:7000/login"
 
-</script> <style scoped> body {
+ /* eslint-disable */
+ import axios from "axios";
+ 
+
+export default {
+    
+    data(){
+        return{
+            input:{
+                username:"",
+                password:""
+            },
+            Uyeler:[],
+            hatali:false,
+
+            
+        };
+
+
+    },
+    async created(){
+        try{
+            const res = await axios.get("http://localhost:7000/login")
+            this.Uyeler = res.data;
+        }
+        catch(e){
+            /* eslint-disable */ 
+            console.error(e);
+        }
+    },
+    
+    methods:{
+        login(){
+            for(let i=0; i<this.Uyeler.length; i++){
+                
+                if(this.input.username !="" && this.input.password !=""){
+                    
+                    if(
+                        this.input.username == this.Uyeler[i].Email &&
+                        this.input.password == this.Uyeler[i].Sifre
+                    ){
+                        alert("Giriş Başarılı Anasayfaya Yönlendiriliyorsunuz");
+                        this.$emit("authenticated", true);
+                        this.$router.replace({ path: "/"});
+                        this.hatali = true;
+                    }
+                
+                }
+            }
+            if(this.input.username=="" || this.input.password ==""){
+                alert("Boş")
+            }
+        }
+       
+    }
+   
+   
+}
+</script> 
+<style scoped> body {
     background-color: white;
 }
 

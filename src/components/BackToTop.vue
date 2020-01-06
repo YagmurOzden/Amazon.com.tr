@@ -1,9 +1,5 @@
 <template>
     <div>
-
-
-
-
         <div class="navFooterBackToTop">
             <span id="BackToTop">
             <a href="#head">Başa dön</a>
@@ -33,13 +29,12 @@
    color:white;
     }
    .navFooterBackToTop :hover{
-        background-color: #2c3e45;
-         display: block;
+    background-color: #2c3e50;
     text-align: center;
     padding: 15px 0;
     font-size: 13px;
-        font-family: arial,sans-serif;
-        box-sizing: border-box;
+    font-family: arial,sans-serif;
+    box-sizing: border-box;
     white-space: normal;
     }
 </style>

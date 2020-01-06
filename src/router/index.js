@@ -88,8 +88,7 @@ const routes = [
     name: 'Item2',
     component: Item2
   },
-
-
+ 
   
 ]
 
